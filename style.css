@@ -1,0 +1,31 @@
+* {
+	font-family: "Shadows Into Light", cursive;
+}
+
+.welcome-message-box {
+	padding-top: 20px;
+	width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
+	color: black;
+	text-shadow: -1px -1px 0 rgb(177, 177, 177), 1px -1px 0 rgb(177, 177, 177), -1px 1px 0 rgb(177, 177, 177), 1px 1px 0 rgb(177, 177, 177);
+}
+
+h1 {
+	font-size: 72px;
+	text-align: center;
+}
+
+.background-image {
+	width: 110%;
+	height: 110%;
+	opacity: 35%;
+	position: fixed;
+	z-index: -1;
+}
+
+.menu-container {
+	margin-top: 0px;
+	padding-top: 0px;
+	text-align: center;
+}
