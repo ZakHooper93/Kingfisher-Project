@@ -28,20 +28,14 @@ function mathFunc(operatorType) {
 
     document.querySelector(".second-display").textContent = operatorType + currentDisplayString;
 
-    console.log(currentDisplayString)
-
     //Why isn't this working!? Its supposed to prevent operator buttons from working with invalid display strings.
     if (currentDisplayString !== "0" && currentDisplayString !== "" && typeof (currentDisplayString) !== undefined) {
         if (currentMathArray.length === 0) {
-            console.log("I'm running");
 
             currentMathArray.push(currentDisplayString);
             currentOperatorArray.push(operatorType);
 
             document.querySelector(".calc-display").textContent = ""
-
-            console.log(currentMathArray)
-            console.log(currentOperatorArray)
 
         } else {
             if (operatorType === "+") {
@@ -73,21 +67,15 @@ function mathFunc(operatorType) {
 }
 
 function totalCalc() {
-    console.log("totalCalc is running")
 
     currentDisplayString = document.querySelector(".calc-display").textContent;
 
     currentMathArray.push(currentDisplayString);
 
-    console.log(currentMathArray)
-    console.log(currentOperatorArray)
-
     let sumString = currentMathArray[0];
     for (i = 0; i < currentOperatorArray.length; i++) {
-        console.log(currentOperatorArray[i])
         if (currentOperatorArray[i] === "√") {
             sumString += `Math.sqrt(${currentMathArray[i]})`; // I can't seem to get this working yet. 
-            console.log(sumString);
         } else if (currentOperatorArray[i] === "%") {
             sumString += `(${currentMathArray[i]} / 100) * ${currentMathArray[i + 1]}` //The nature of using strings to store the data was probably not good. Next time I would definitely just store them as numbers.
         } else if (currentOperatorArray[i] === "plus-minus") {
@@ -95,9 +83,9 @@ function totalCalc() {
         }
         else {
             sumString += ` ${currentOperatorArray[i]} ${currentMathArray[i + 1]}`
-            console.log(sumString);
         }
     }
+    
     sumStringTotal = math.evaluate(sumString)
 
     document.querySelector(".calc-display").textContent = sumStringTotal;
@@ -105,14 +93,11 @@ function totalCalc() {
 
     currentDisplayString = document.querySelector(".calc-display").textContent
 
-    console.log(sumStringTotal)
-
     currentMathArray = [];
     currentOperatorArray = [];
 }
 
 function arrStore(opp) {
-    console.log("arrStore is running")
 
     currentDisplayString = document.querySelector(".calc-display").textContent;
 
@@ -121,12 +106,11 @@ function arrStore(opp) {
 
     document.querySelector(".second-display").textContent = opp + currentDisplayString;
     document.querySelector(".calc-display").textContent = "";
-
-    console.log(currentMathArray)
-    console.log(currentOperatorArray)
 }
 
 //In the next version, I would remove this blatant violation of DRY and use an ID for each button that I can interchangably construct a DOMstring from. 
+//Should have used HTML button to provide info for a DOM string constructor.
+
 document.getElementById("1-button").addEventListener("click", () => addNumberToDisplay("1"));
 document.getElementById("2-button").addEventListener("click", () => addNumberToDisplay("2"));
 document.getElementById("3-button").addEventListener("click", () => addNumberToDisplay("3"));
@@ -150,7 +134,7 @@ document.getElementById("plus-minus-button").addEventListener("click", () => mat
 
 document.getElementById("=-button").addEventListener("click", () => mathFunc("="));
 
-document.getElementById("c-button").addEventListener("click", () => init());;
+document.getElementById("c-button").addEventListener("click", () => init());
 
 function init() {
     document.querySelector(".calc-display").textContent = "0";
@@ -160,8 +144,5 @@ function init() {
     currentMathArray = [];
     currentOperatorArray = [];
 }
-init();
 
-function addition(currentString) {
-    let num1 = currentString
-}
+init();
