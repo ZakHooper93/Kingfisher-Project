@@ -13,15 +13,50 @@
 	margin: auto;
 }
 
+@media (max-width: 600px) {
+	.calculator-buttons-container {
+		grid-template-columns: 90px 90px 90px 90px;
+		grid-template-rows: 90px 90px 90px 90px 90px;
+		width: 400px;
+		height: auto;
+		margin: auto;
+	}
+}
+
+@media (max-height: 900px) {
+	.calculator-buttons-container {
+		grid-template-columns: 90px 90px 90px 90px;
+		grid-template-rows: 90px 90px 90px 90px 90px;
+		width: 400px;
+		height: auto;
+		margin: auto;
+	}
+}
+
 h1 {
+	font-family: "Share Tech Mono", monospace;
 	text-align: center;
-	width: 500px;
+	width: 600px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+@media (max-width: 600px) {
+	h1 {
+		width: 400px;
+		font-size: 23px;
+	}
+}
+
+@media (max-height: 900px) {
+	h1 {
+		width: 400px;
+		font-size: 23px;
+	}
+}
+
 .calc-display {
-	font-family: 'Share Tech Mono', monospace;
+	font-family: "Share Tech Mono", monospace;
 	word-wrap: break-word;
 	font-size: 50px;
 	border: black;
@@ -32,7 +67,24 @@ h1 {
 	margin: auto;
 }
 
+@media (max-width: 600px) {
+	.calc-display {
+		width: 400px;
+		height: auto;
+		font-size: 30px;
+	}
+}
+
+@media (max-height: 900px) {
+	.calc-display {
+		width: 400px;
+		height: auto;
+		font-size: 30px;
+	}
+}
+
 .second-display {
+	font-family: "Share Tech Mono", monospace;
 	border-bottom: 2px solid black;
 	font-size: 30px;
 	width: 500px;
@@ -40,6 +92,19 @@ h1 {
 	text-align: right;
 	margin: auto;
 }
+
+@media (max-width: 600px) {
+	.second-display {
+		width: 400px;
+	}
+}
+
+@media (max-height: 900px) {
+	.second-display {
+		width: 400px;
+	}
+}
+
 .square-button {
 	border: rgba(7, 7, 7, 0.356);
 	border-style: solid;
@@ -49,8 +114,9 @@ h1 {
 }
 
 .square-button:hover {
-	border: rgb(0, 200, 98);
+	border: rgb(0, 236, 114);
 	border-style: solid;
+	border-width: 4px;
 }
 
 .square-button:active {
@@ -58,11 +124,23 @@ h1 {
 }
 
 .button-text {
-	font-family: 'Share Tech Mono', monospace;
+	font-family: "Share Tech Mono", monospace;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 45px;
+}
+
+@media (max-width: 600px) {
+	.button-text {
+		font-size: 30px;
+	}
+}
+
+@media (max-height: 900px) {
+	.button-text {
+		font-size: 30px;
+	}
 }
 
 .background {

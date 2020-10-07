@@ -2,8 +2,8 @@
 //Percentage button
 //plus minus button
 // do e values for 18 or more digits
-// do not allow for string to be empty before an operator is pressed
-// don't allow for undefined in string
+// do not allow for string to be empty, undefined or 0 before an operator is pressed
+// clear up that awful DOM string section.
 
 let currentDisplayString;
 function addNumberToDisplay(buttonID) {
