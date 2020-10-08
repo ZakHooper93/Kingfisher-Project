@@ -56,6 +56,7 @@ h1 {
 }
 
 .calc-display {
+	background-color: rgba(127, 255, 212, 0.425);
 	font-family: "Share Tech Mono", monospace;
 	word-wrap: break-word;
 	font-size: 50px;

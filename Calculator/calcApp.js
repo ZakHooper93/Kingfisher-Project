@@ -1,10 +1,3 @@
-//to do
-//Percentage button
-//plus minus button
-// do e values for 18 or more digits
-// do not allow for string to be empty, undefined or 0 before an operator is pressed
-// clear up that awful DOM string section.
-
 let currentDisplayString;
 function addNumberToDisplay(buttonID) {
     currentDisplayString = document.querySelector(".calc-display").textContent;
@@ -146,3 +139,10 @@ function init() {
 }
 
 init();
+
+//Things I would like to do with some more time
+//Percentage button.
+//Plus minus button.
+//Do e values when the maximum amount of numbers in the display is reacher.
+//Not allow for string to be empty, undefined or 0 before an operator is pressed
+//Clear up that awful DOM string section by using HTML buttons with an ID. This way I could construct strings from a function and store them in an object.
